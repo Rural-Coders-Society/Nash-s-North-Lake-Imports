@@ -92,6 +92,13 @@ h1 {
   margin: 0.8rem 0 0;
 }
 
+
+.hero-copy,
+.section-heading,
+.about-layout > div {
+  max-width: 62ch;
+}
+
 .hero-image,
 .about-image {
   width: 100%;
@@ -260,6 +267,10 @@ cite {
 }
 
 @media (max-width: 900px) {
+  .container {
+    width: min(1100px, calc(100% - 1.4rem));
+  }
+
   .hero-layout,
   .about-layout,
   .card-grid {
@@ -270,5 +281,74 @@ cite {
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .header-inner,
+  .footer-inner,
+  .section,
+  .hero {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero {
+    padding: 1.35rem 0;
+  }
+
+  .section {
+    padding: 1.35rem 0;
+  }
+
+  .kicker {
+    font-size: 0.68rem;
+    letter-spacing: 0.11em;
+  }
+
+  h1 {
+    font-size: 1.35rem;
+  }
+
+  .hero h2 {
+    font-size: 1.55rem;
+    line-height: 1.2;
+  }
+
+  .hero p,
+  .section-heading p,
+  .service-card p,
+  .testimonial {
+    font-size: 0.96rem;
+  }
+
+  .service-card,
+  .testimonial {
+    padding: 0.85rem;
+  }
+
+  .business-details {
+    margin: 0.7rem 0 0.9rem;
+  }
+
+  .call-button,
+  .call-link,
+  .large {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .hero-cta-row {
+    gap: 0.55rem;
+  }
+
+  .hours {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .footer-inner p {
+    margin: 0;
+    font-size: 0.92rem;
   }
 }
