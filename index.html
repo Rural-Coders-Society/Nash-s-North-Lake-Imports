@@ -12,66 +12,70 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="background-overlay" aria-hidden="true"></div>
-
-    <header class="site-header glass-panel">
-      <div>
-        <p class="kicker">Local import auto specialist</p>
-        <h1>Nash's North Lake Imports</h1>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div>
+          <p class="kicker">Local import auto specialist</p>
+          <h1>Nash's North Lake Imports</h1>
+        </div>
+        <a class="call-button" href="tel:+15302823312" aria-label="Call Nash's North Lake Imports now">
+          Call Now: (530) 282-3312
+        </a>
       </div>
-      <a class="call-button" href="tel:+15302823312" aria-label="Call Nash's North Lake Imports now">
-        Call Now: (530) 282-3312
-      </a>
     </header>
 
     <main>
-      <section class="hero glass-panel" id="home">
-        <div class="hero-copy">
-          <p class="eyebrow">Reliable. Honest. Neighborhood trusted.</p>
-          <h2>Import auto repair with mountain-town care and modern precision.</h2>
-          <p>
-            Serving North Lake Tahoe with straightforward diagnostics, maintenance,
-            and repairs that keep your vehicle safe and road-ready.
-          </p>
-          <div class="hero-cta-row">
-            <a class="call-button large" href="tel:+15302823312">Tap to Call the Shop</a>
-            <p class="hours">Open now · Closes 5 PM</p>
+      <section class="hero" id="home">
+        <div class="container hero-layout reveal">
+          <div class="hero-copy">
+            <p class="eyebrow">Reliable. Honest. Neighborhood trusted.</p>
+            <h2>Import auto repair with mountain-town care and modern precision.</h2>
+            <p>
+              Serving North Lake Tahoe with straightforward diagnostics, maintenance,
+              and repairs that keep your vehicle safe and road-ready.
+            </p>
+            <div class="hero-cta-row">
+              <a class="call-button large" href="tel:+15302823312">Tap to Call the Shop</a>
+              <p class="hours">Open now · Closes 5 PM</p>
+            </div>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1200&q=80"
+            alt="Mechanic shop placeholder"
+            class="hero-image"
+          />
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="container reveal">
+          <div class="section-heading">
+            <h3>Services</h3>
+            <p>Clear recommendations, quality parts, and workmanship you can trust.</p>
+          </div>
+          <div class="card-grid">
+            <article class="service-card">
+              <h4>Diagnostics & Check Engine</h4>
+              <p>Accurate computer diagnostics for import makes and models.</p>
+            </article>
+            <article class="service-card">
+              <h4>Maintenance & Oil Service</h4>
+              <p>Factory-scheduled maintenance, fluid checks, filters, and tune-ups.</p>
+            </article>
+            <article class="service-card">
+              <h4>Brakes, Suspension & Steering</h4>
+              <p>Safe stopping, smooth handling, and dependable ride quality.</p>
+            </article>
+            <article class="service-card">
+              <h4>Engine & Cooling Repairs</h4>
+              <p>From leak repairs to cooling system care that protects your engine.</p>
+            </article>
           </div>
         </div>
-        <img
-          src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1200&q=80"
-          alt="Mechanic shop placeholder"
-          class="hero-image"
-        />
       </section>
 
-      <section class="content-section" id="services">
-        <div class="section-heading glass-panel">
-          <h3>Services</h3>
-          <p>Clear recommendations, quality parts, and workmanship you can trust.</p>
-        </div>
-        <div class="card-grid">
-          <article class="service-card glass-panel">
-            <h4>Diagnostics & Check Engine</h4>
-            <p>Accurate computer diagnostics for import makes and models.</p>
-          </article>
-          <article class="service-card glass-panel">
-            <h4>Maintenance & Oil Service</h4>
-            <p>Factory-scheduled maintenance, fluid checks, filters, and tune-ups.</p>
-          </article>
-          <article class="service-card glass-panel">
-            <h4>Brakes, Suspension & Steering</h4>
-            <p>Safe stopping, smooth handling, and dependable ride quality.</p>
-          </article>
-          <article class="service-card glass-panel">
-            <h4>Engine & Cooling Repairs</h4>
-            <p>From leak repairs to cooling system care that protects your engine.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="content-section about" id="about">
-        <div class="about-layout glass-panel">
+      <section class="section about" id="about">
+        <div class="container about-layout reveal">
           <img
             src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=1200&q=80"
             alt="Mechanic working on car placeholder"
@@ -95,31 +99,35 @@
         </div>
       </section>
 
-      <section class="content-section" id="testimonials">
-        <div class="section-heading glass-panel">
-          <h3>Testimonials</h3>
-          <p>What local drivers say about their experience.</p>
-        </div>
-        <div class="card-grid testimonials-grid">
-          <blockquote class="testimonial glass-panel">
-            “Great mechanic and service!”
-            <cite>— Local Google reviewer</cite>
-          </blockquote>
-          <blockquote class="testimonial glass-panel">
-            “My husband and I had the engine light come on while in Tahoe one weekend.”
-            <cite>— Local Google reviewer</cite>
-          </blockquote>
-          <blockquote class="testimonial glass-panel">
-            “He is a very knowledgeable and personable man.”
-            <cite>— Local Google reviewer</cite>
-          </blockquote>
+      <section class="section testimonials" id="testimonials">
+        <div class="container reveal">
+          <div class="section-heading">
+            <h3>Testimonials</h3>
+            <p>What local drivers say about their experience.</p>
+          </div>
+          <div class="card-grid testimonials-grid">
+            <blockquote class="testimonial">
+              “Great mechanic and service!”
+              <cite>— Local Google reviewer</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+              “My husband and I had the engine light come on while in Tahoe one weekend.”
+              <cite>— Local Google reviewer</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+              “He is a very knowledgeable and personable man.”
+              <cite>— Local Google reviewer</cite>
+            </blockquote>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer glass-panel">
-      <p>Nash's North Lake Imports · 2905 Rose Ave, Tahoe City, CA 96145</p>
-      <a class="call-button" href="tel:+15302823312">Call: (530) 282-3312</a>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Nash's North Lake Imports · 2905 Rose Ave, Tahoe City, CA 96145</p>
+        <a class="call-button" href="tel:+15302823312">Call: (530) 282-3312</a>
+      </div>
     </footer>
 
     <script src="script.js"></script>

@@ -1,14 +1,12 @@
 :root {
-  --bg: #4f5848;
-  --bg-dark: #2f362d;
-  --earth: #8f7a60;
-  --cream: #ece5da;
-  --glass: rgba(255, 255, 255, 0.16);
-  --glass-border: rgba(255, 255, 255, 0.28);
-  --text: #f7f3ed;
-  --muted: #e0d7ca;
-  --accent: #d7b88a;
-  --shadow: rgba(16, 18, 14, 0.28);
+  --bg: #f3efe8;
+  --surface: #ffffff;
+  --surface-alt: #f8f5ef;
+  --ink: #25231f;
+  --muted: #5f5a50;
+  --line: #ddd4c7;
+  --accent: #b78952;
+  --accent-soft: #d8bc97;
 }
 
 * {
@@ -18,45 +16,36 @@
 body {
   margin: 0;
   font-family: "Segoe UI", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  color: var(--text);
+  color: var(--ink);
   line-height: 1.6;
-  background:
-    linear-gradient(140deg, rgba(47, 54, 45, 0.86), rgba(68, 74, 66, 0.7)),
-    url("https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1600&q=80")
-      center / cover fixed no-repeat;
-  min-height: 100vh;
+  background: var(--bg);
 }
 
-.background-overlay {
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(circle at 10% 20%, rgba(223, 205, 181, 0.18), transparent 48%);
-  pointer-events: none;
-  z-index: -1;
-}
-
-main,
-.site-header,
-.site-footer {
+.container {
   width: min(1100px, calc(100% - 2.4rem));
   margin-inline: auto;
 }
 
 .site-header {
+  background: #2f362d;
+  color: #f8f2e9;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  margin-top: 1.2rem;
-  padding: 1rem 1.2rem;
+  padding: 1rem 0;
 }
 
 .kicker {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--muted);
-  font-size: 0.75rem;
+  color: #d9cbb7;
+  font-size: 0.74rem;
 }
 
 h1,
@@ -72,8 +61,15 @@ h1 {
 }
 
 .hero {
-  margin-top: 1.2rem;
-  padding: clamp(1rem, 3vw, 2rem);
+  background:
+    linear-gradient(140deg, rgba(37, 43, 35, 0.88), rgba(51, 58, 47, 0.82)),
+    url("https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1600&q=80")
+      center / cover no-repeat;
+  color: #f8f3ec;
+  padding: 2rem 0;
+}
+
+.hero-layout {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 1.2rem;
@@ -84,7 +80,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.09em;
   font-size: 0.79rem;
-  color: var(--muted);
+  color: #dbcdb9;
 }
 
 .hero h2 {
@@ -102,30 +98,31 @@ h1 {
   height: 100%;
   min-height: 240px;
   object-fit: cover;
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  transition: transform 260ms ease;
+  border-radius: 0.45rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-.hero-image:hover,
-.about-image:hover {
-  transform: scale(1.015);
+.section {
+  padding: 2rem 0;
+  border-top: 1px solid var(--line);
+  background: var(--surface);
 }
 
-.content-section {
-  margin-top: 1.2rem;
+.services,
+.testimonials {
+  background: var(--surface-alt);
 }
 
 .section-heading {
-  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .section-heading p {
   margin: 0.4rem 0 0;
+  color: var(--muted);
 }
 
 .card-grid {
-  margin-top: 0.8rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.8rem;
@@ -134,29 +131,29 @@ h1 {
 .service-card,
 .testimonial {
   padding: 1rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
   transition:
-    transform 220ms ease,
-    border-color 220ms ease,
-    background-color 220ms ease;
+    transform 200ms ease,
+    border-color 200ms ease;
 }
 
 .service-card h4 {
   margin-bottom: 0.4rem;
-  color: #fff9f0;
 }
 
 .service-card:hover,
 .testimonial:hover,
 .call-button:hover,
 .call-link:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .about-layout {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 1rem;
-  padding: 1rem;
 }
 
 .business-details {
@@ -165,17 +162,15 @@ h1 {
 }
 
 .business-details li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.45rem;
 }
 
 .inline-phone {
-  color: #fbe9ca;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  color: #2f4f8f;
 }
 
 .inline-phone:hover {
-  color: #fff5e4;
+  color: #1f3870;
 }
 
 .testimonial {
@@ -191,21 +186,17 @@ cite {
 }
 
 .site-footer {
-  margin: 1.2rem auto;
-  padding: 1rem 1.2rem;
+  background: #242920;
+  color: #efe7da;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.footer-inner {
+  padding: 1rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0.8rem;
-}
-
-.glass-panel {
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  border-radius: 1rem;
-  box-shadow: 0 14px 34px -18px var(--shadow);
-  backdrop-filter: blur(11px);
-  -webkit-backdrop-filter: blur(11px);
 }
 
 .call-button,
@@ -215,31 +206,31 @@ cite {
   font-weight: 600;
   letter-spacing: 0.02em;
   color: #241f17;
-  background: linear-gradient(130deg, var(--accent), #e6ceaa);
-  border: 1px solid rgba(255, 244, 223, 0.7);
-  border-radius: 0.75rem;
-  padding: 0.64rem 0.92rem;
+  background: linear-gradient(130deg, var(--accent), var(--accent-soft));
+  border: 1px solid rgba(98, 72, 36, 0.25);
+  border-radius: 0.45rem;
+  padding: 0.62rem 0.9rem;
   transition:
-    transform 220ms ease,
-    filter 220ms ease,
-    box-shadow 220ms ease;
+    transform 200ms ease,
+    filter 200ms ease,
+    box-shadow 200ms ease;
 }
 
 .call-button:hover,
 .call-link:hover {
-  filter: brightness(1.05);
-  box-shadow: 0 10px 20px -14px rgba(238, 204, 159, 0.8);
+  filter: brightness(1.03);
+  box-shadow: 0 8px 16px -12px rgba(122, 93, 59, 0.8);
 }
 
 .call-button:focus-visible,
 .call-link:focus-visible {
-  outline: 2px solid rgba(253, 234, 204, 0.95);
+  outline: 2px solid rgba(212, 178, 129, 0.95);
   outline-offset: 2px;
 }
 
 .large {
-  padding: 0.82rem 1.05rem;
-  font-size: 1.04rem;
+  padding: 0.8rem 1rem;
+  font-size: 1.03rem;
 }
 
 .hero-cta-row {
@@ -252,15 +243,15 @@ cite {
 
 .hours {
   margin: 0;
-  color: var(--muted);
+  color: #ddd0be;
 }
 
 .reveal {
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(8px);
   transition:
-    opacity 460ms ease,
-    transform 460ms ease;
+    opacity 420ms ease,
+    transform 420ms ease;
 }
 
 .reveal.visible {
@@ -269,17 +260,14 @@ cite {
 }
 
 @media (max-width: 900px) {
-  .hero,
-  .about-layout {
-    grid-template-columns: 1fr;
-  }
-
+  .hero-layout,
+  .about-layout,
   .card-grid {
     grid-template-columns: 1fr;
   }
 
-  .site-header,
-  .site-footer {
+  .header-inner,
+  .footer-inner {
     flex-direction: column;
     align-items: flex-start;
   }
